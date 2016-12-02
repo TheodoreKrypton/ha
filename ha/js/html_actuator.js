@@ -51,7 +51,6 @@ HTMLActuator.prototype.clearContainer = function (container) {
 
 HTMLActuator.prototype.addTile = function (tile) {
   var text = new Array();
-<<<<<<< HEAD
   text[1] = "扬州江少";
   text[2] = "中央大学";
   text[3] = "交通大学";
@@ -68,24 +67,6 @@ HTMLActuator.prototype.addTile = function (tile) {
   text[14] = "很惭愧";
   var self = this;
   var text2 = function (n) { var r = 0; while (n > 1) r++, n >>= 1; return r; };
-=======
-  text[1] = "觅食"
-  text[2] = "求偶"
-  text[3] = "抱对"
-  text[4] = "生殖细胞"
-  text[5] = "受精卵"
-  text[6] = "胚胎"
-  text[7] = "幼年蝌蚪"
-  text[8] = "成年蝌蚪"
-  text[9] = "幼蛙"
-  text[10] = "蛤"
-  text[11] = "ΘΘ"
-  text[12] = "Θ..Θ"
-  text[13] = "唔识得"
-  text[14] = "唔姿瓷"
-  var self = this;
-  var text2 = function (n) { var r = 0; while (n > 1) r++, n >>= 1; return r; }
->>>>>>> upstream/master
 
   var wrapper   = document.createElement("div");
   var inner     = document.createElement("div");
@@ -94,10 +75,6 @@ HTMLActuator.prototype.addTile = function (tile) {
 
   // We can't use classlist because it somehow glitches when replacing classes
   var classes = ["tile", "tile-" + tile.value, positionClass];
-<<<<<<< HEAD
-=======
-
->>>>>>> upstream/master
   if (tile.value > 2048) classes.push("tile-super");
 
   this.applyClasses(wrapper, classes);
@@ -166,7 +143,6 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 };
 
 HTMLActuator.prototype.message = function (won) {
-<<<<<<< HEAD
   var request = new XMLHttpRequest();
   request.open("GET","http://giveonesecondto.me:8000/ha/?second="+this.score, false);
   request.send();
@@ -174,8 +150,6 @@ HTMLActuator.prototype.message = function (won) {
   request.send();
   text = request.responseText;
   document.getElementById('total-seconds').innerText = "已众筹："+text;
-=======
->>>>>>> upstream/master
   var type    = won ? "game-won" : "game-over";
   var message = won ? "你可以和我谈笑风生了!" : "还是要提高自己的姿势水平！";
 
@@ -208,7 +182,6 @@ HTMLActuator.prototype.scoreTweetButton = function () {
 
   return tweet;
 };
-<<<<<<< HEAD
 
 showHigh = function(){
   var xhr = new XMLHttpRequest();
@@ -217,5 +190,3 @@ showHigh = function(){
   text = xhr.responseText;
   alert(text);
 };
-=======
->>>>>>> upstream/master

@@ -1,6 +1,5 @@
 // Wait till the browser is ready to render the game (avoids glitches)
 window.requestAnimationFrame(function () {
-<<<<<<< HEAD
   var request = new XMLHttpRequest();
   request.open("GET", "http://giveonesecondto.me:8000/ha/", false);
   request.send();
@@ -8,7 +7,3 @@ window.requestAnimationFrame(function () {
   document.getElementById('total-seconds').innerText = "已众筹："+txt;
   new GameManager(4, KeyboardInputManager, HTMLActuator, LocalScoreManager);
 });
-=======
-  new GameManager(4, KeyboardInputManager, HTMLActuator, LocalScoreManager);
-});
->>>>>>> upstream/master
